@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Video Page</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  overflow: hidden;
+}
+
+/* COVER */
+#cover {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: url('https://i.ibb.co/wF7Jp7kB/092-C8-A37-6-AF1-4972-BEC9-0-A58-F37106-CA.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#cover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+}
+
+/* PLAY BUTTON */
+.play-btn {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 0, 80, 0.9);
+  clip-path: polygon(25% 15%, 25% 85%, 85% 50%);
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,0,80,0.6);
+}
+
+/* VIDEO */
+#app {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  background: black;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ACTIONS */
+.actions {
+  position: absolute;
+  right: 15px;
+  bottom: 120px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- COVER -->
+<div id="cover">
+  <div class="play-btn" id="enterBtn"></div>
+</div>
+
+<!-- VIDEO -->
+<div id="app">
+
+  <iframe
+    id="videoFrame"
+    src=""
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+
+  <div class="actions">
+    ❤️<br>Like<br>
+    💬<br>Comment<br>
+    🔗<br>Share
+  </div>
+
+</div>
+
+<script>
+
+document.getElementById("enterBtn").onclick = function () {
+
+  document.getElementById("cover").style.display = "none";
+  document.getElementById("app").style.display = "block";
+
+  document.getElementById("videoFrame").src =
+    "https://player.vimeo.com/video/87000921?autoplay=1&muted=1&title=0&byline=0&portrait=0";
+
+  setTimeout(function () {
+    window.location.href = "https://www.effectivecpmnetwork.com/vbsga4ykhq?key=8d1e9674bc6fb19aaea986194e12be53";
+  }, 5000);
+
+};
+
+</script>
+
+</body>
+</html>
